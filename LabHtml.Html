@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student CRUD</title>
+
+    <link rel="stylesheet" href="LabAct.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Student Management System</h1>
+
+        <p id="loading" role="status" aria-live="polite"></p>
+
+        <p id="message" role="status" aria-live="polite"></p>
+
+        
+
+        <form id="studentForm">
+
+            <input type="hidden" id="studentId">
+
+            <input
+                type="text"
+                id="firstName"
+                placeholder="First Name"
+                required
+            >
+
+            <input
+                type="text"
+                id="lastName"
+                placeholder="Last Name"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Email"
+                required
+            >
+
+            <input
+                type="number"
+                id="age"
+                placeholder="Age"
+                min="1"
+                required
+            >
+
+            <button type="submit" id="submitButton">
+                Add Student
+            </button>
+
+            <button
+                type="button"
+                id="cancelButton"
+                onclick="cancelEdit()"
+            >
+                Cancel
+            </button>
+
+        </form>
+
+
+
+
+        <h2>Student Records</h2>
+
+        <div id="studentList"></div>
+
+    </div>
+
+    <script src="LabActJs.js"></script>
+
+</body>
+
+</html>
